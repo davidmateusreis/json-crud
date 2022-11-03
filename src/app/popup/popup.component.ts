@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
+import { ApiService } from '../shared/api.service';
 
 @Component({
   selector: 'app-popup',
@@ -8,7 +10,10 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class PopupComponent implements OnInit {
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(
+    private formBuilder: FormBuilder,
+    private matDialog: MatDialog,
+    private apiService: ApiService) { }
 
   ngOnInit(): void {
   }
@@ -21,5 +26,18 @@ export class PopupComponent implements OnInit {
     address: this.formBuilder.control('', Validators.required),
     isactive: this.formBuilder.control(true)
   });
+
+  saveCompany() {
+    if (this.companyform.valid) {
+      this.apiService.CreateCompany(this.companyform.value).subscribe(response => {
+        this.closePopup();
+        alert("Saved Successfully!")
+      });
+    }
+  }
+
+  closePopup() {
+    this.matDialog.closeAll();
+  }
 
 }
