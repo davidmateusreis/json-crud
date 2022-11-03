@@ -1,6 +1,9 @@
 <h2>Company Listing</h2>
 
 <div class="mat-elevation-z8">
+    <div>
+        <a mat-raised-button color="primary" style="margin: 2%" (click)="OpenPopup('')">Create New</a>
+    </div>
     <table mat-table [dataSource]="companydata" class="mat-elevation-z8">
 
         <ng-container matColumnDef="id">
