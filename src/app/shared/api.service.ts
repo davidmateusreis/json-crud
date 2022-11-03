@@ -16,7 +16,19 @@ export class ApiService {
     return this.http.get<Company[]>(this.apiurl);
   }
 
+  getCompanyById(id: any): Observable<Company> {
+    return this.http.get<Company>(this.apiurl + '/' + id);
+  }
+
+  removeCompanyById(id: any) {
+    return this.http.delete(this.apiurl + '/' + id);
+  }
+
   createCompany(companydata: any) {
     return this.http.post(this.apiurl, companydata);
+  }
+
+  updateCompany(id: any, companydata: any) {
+    return this.http.put(this.apiurl + '/' + id, companydata);
   }
 }

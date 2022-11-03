@@ -9,12 +9,44 @@
       "id": 1
     },
     {
+      "id": 2,
       "name": "Microsoft Inc.",
       "empcount": "36786",
       "revenue": "200000",
       "address": "1st Street Cupertino 600048",
-      "isactive": true,
-      "id": 2
+      "isactive": true
+    },
+    {
+      "id": 3,
+      "name": "Google Inc.",
+      "empcount": "36786",
+      "revenue": "200000",
+      "address": "1st Street Cupertino 600048",
+      "isactive": true
+    },
+    {
+      "id": 4,
+      "name": "Amazon Inc.",
+      "empcount": "36786",
+      "revenue": "200000",
+      "address": "1st Street Cupertino 600048",
+      "isactive": true
+    },
+    {
+      "id": 5,
+      "name": "Meta Inc.",
+      "empcount": "36786",
+      "revenue": "200000",
+      "address": "1st Street Cupertino 600048",
+      "isactive": true
+    },
+    {
+      "id": 6,
+      "name": "Tesla Inc.",
+      "empcount": "36786",
+      "revenue": "200000",
+      "address": "1st Street Cupertino 600048",
+      "isactive": true
     }
   ]
 }
