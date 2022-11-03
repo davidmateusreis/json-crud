@@ -2,7 +2,7 @@
 
 <div class="mat-elevation-z8">
     <div>
-        <a mat-raised-button color="primary" style="margin: 2%" (click)="OpenPopup('')">Create New</a>
+        <a mat-raised-button color="primary" style="margin: 2%" (click)="openPopup('')">Create New</a>
     </div>
     <table mat-table [dataSource]="companydata" class="mat-elevation-z8">
 
@@ -17,13 +17,13 @@
         </ng-container>
 
         <ng-container matColumnDef="empcount">
-            <th mat-header-cell *matHeaderCellDef>Employees</th>
-            <td mat-cell *matCellDef="let element">{{ element.empcount }}</td>
+            <th mat-header-cell *matHeaderCellDef>Employee Count</th>
+            <td mat-cell *matCellDef="let element">{{ element.empcount | number }}</td>
         </ng-container>
 
         <ng-container matColumnDef="revenue">
             <th mat-header-cell *matHeaderCellDef>Revenue</th>
-            <td mat-cell *matCellDef="let element">{{ element.revenue }}</td>
+            <td mat-cell *matCellDef="let element">{{ element.revenue | currency }}</td>
         </ng-container>
 
         <ng-container matColumnDef="address">

@@ -29,7 +29,7 @@ export class PopupComponent implements OnInit {
 
   saveCompany() {
     if (this.companyform.valid) {
-      this.apiService.CreateCompany(this.companyform.value).subscribe(response => {
+      this.apiService.createCompany(this.companyform.value).subscribe(response => {
         this.closePopup();
         alert("Saved Successfully!")
       });

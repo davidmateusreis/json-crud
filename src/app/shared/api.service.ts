@@ -12,11 +12,11 @@ export class ApiService {
 
   apiurl = 'http://localhost:3000/company';
 
-  GetAllCompany(): Observable<Company[]> {
+  getAllCompany(): Observable<Company[]> {
     return this.http.get<Company[]>(this.apiurl);
   }
 
-  CreateCompany(companydata: any) {
+  createCompany(companydata: any) {
     return this.http.post(this.apiurl, companydata);
   }
 }
